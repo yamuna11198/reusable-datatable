@@ -1,0 +1,26 @@
+[
+  {
+    "sno": 1,
+    "name": "xxx",
+    "nationality": "Albania",
+    "dob": "02/05/1994",
+    "gender": "Female"
+
+  },
+  {
+    "sno": 2,
+    "name": "yyy",
+    "nationality": "Australia",
+    "dob": "28/01/1998",
+    "gender": "Female"
+
+  },
+  {
+    "sno": 3,
+    "name": "zzz",
+    "nationality": "Pakistan",
+    "dob": "30/12/1994",
+    "gender": "Male"
+
+  }
+]

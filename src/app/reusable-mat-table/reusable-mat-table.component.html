@@ -1,0 +1,31 @@
+<table mat-table class="mat-elevation-z8" [dataSource]="dataSource">
+  <ng-container *ngFor="let c of columnName; let i=index" [matColumnDef]="c.caption">
+    <ng-container>
+      <th mat-header-cell *matHeaderCellDef>
+        {{c.caption}}
+      </th>
+    </ng-container>
+
+
+    <td mat-cell *matCellDef="let element">
+      <ng-container *ngIf="!c.config else hasConfig">{{element[c.field]}}</ng-container>
+      <ng-template #hasConfig>
+        <ng-container *ngIf="c.config.isAction">
+          <mat-icon *ngFor="let action of c.config.actions" (click)="emitAction(action,element)" mat-button>{{ action
+            }}</mat-icon>
+        </ng-container>
+        <ng-container *ngIf="c.config.isDate">
+          {{element[c.field]}}
+        </ng-container>
+      </ng-template>
+    </td>
+
+    <!-- <ng-container  *ngIf="c.config.isAction" >
+
+      <button *ngFor="let action of c.config.actions" (click)="emitAction(action)" mat-button>{{ action }}</button>
+    </ng-container> -->
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
