@@ -8,9 +8,9 @@ import { TableColumn } from '../app.component';
   styleUrls: ['./reusable-mat-table.component.css'],
 })
 export class ReusableMatTableComponent implements OnInit {
-  @Input() columnName: TableColumn[] =[];
+  @Input() columnName: TableColumn[] = [];
   @Input() dataSource: any;
-  @Output() OnAction: EventEmitter<any> = new EventEmitter<any>();
+  @Output() onAction: EventEmitter<any> = new EventEmitter<any>();
   public displayedColumns: string[] | undefined;
   constructor() {}
 
@@ -24,7 +24,19 @@ export class ReusableMatTableComponent implements OnInit {
     this.dataSource = new MatTableDataSource(data);
   }
   emitAction(action: string, element: any) {
-    this.OnAction.emit({ action, element });
+    this.onAction.emit({ action, element });
     console.log(action);
+    alert(action + ' is clicked'); // open in new tab to see this
+    switch (action) {
+      case 'visibility':
+        //give statements
+        break;
+      case 'edit':
+        //give statements
+        break;
+      case 'delete':
+        //give statements
+        break;
+    }
   }
 }
