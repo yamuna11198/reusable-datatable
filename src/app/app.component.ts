@@ -25,15 +25,15 @@ export class AppComponent implements OnInit {
   getTableData_periodicInfo$: any | undefined;
   getTableData_prsnldtls$: any | undefined;
   myColumns1: TableColumn[] = [
-    { caption: 'SNO', field: 'sno' },
+    { caption: 'Position', field: 'position' },
     { caption: 'Name', field: 'name' },
-    { caption: 'Nationality', field: 'nationality' },
-    {
-      caption: 'Date of Birth',
-      field: 'dob',
-      config: { isDate: 'true', format: 'dd/MM/YYYY' },
-    },
-    { caption: 'Gender', field: 'gender' },
+    { caption: 'Weight', field: 'weight' },
+    // {
+    //   caption: 'Date of Birth',
+    //   field: 'dob',
+    //   config: { isDate: 'true', format: 'dd/MM/YYYY' },
+    // },
+    { caption: 'Symbol', field: 'symbol' },
     {
       caption: 'Action',
       field: 'action',
@@ -50,7 +50,6 @@ export class AppComponent implements OnInit {
       config: { isDate: 'true', format: 'dd/MM/YYYY' },
     },
     { caption: 'Gender', field: 'gender' },
-    { caption: 'Status', field: 'status' },
     {
       caption: 'Action',
       field: 'action',
